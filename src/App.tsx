@@ -16,10 +16,10 @@ function App() {
   return (
     <>
       <PageLoader />
-      <div className="min-h-screen bg-background relative">
+      <div className="min-h-screen bg-background relative overflow-x-hidden w-full">
         <GoldParticles />
         <Header />
-        <main>
+        <main className="overflow-x-hidden w-full">
           <Hero />
           <About />
           <Menu />

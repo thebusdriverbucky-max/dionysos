@@ -14,7 +14,7 @@ export default function GoldParticles() {
   }, [])
 
   return (
-    <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+    <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden w-full max-w-full">
       {particles.map((particle) => (
         <motion.div
           key={particle.id}
@@ -24,6 +24,8 @@ export default function GoldParticles() {
             top: `${particle.y}%`,
             width: particle.size,
             height: particle.size,
+            maxWidth: '10px',
+            maxHeight: '10px',
           }}
           animate={{
             opacity: [0, 1, 0],
